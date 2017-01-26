@@ -48,18 +48,84 @@
 
 \section{Introduction}
 
-In this lab, we modeled the mechanical linkage of a human leg (Fig. 1), with 3 degrees of freedom at hip and 1 degree of freedom at knee. 
+In this lab, we modeled the mechanical linkage of a human leg, with 3 degrees of freedom at hip and 1 degree of freedom at knee. We first extracted the D-H parameters of each joint and computed the transformation matrices for forward kinematics. 
+And then we calculated the Jacobian matrix and completed inverse kinematics calculation on a simple linear motion with iterative method.
+
+\section{Methods}
+
+We first need to establish a model of human leg.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=250pt]{rpy}
+\caption{world frame coordinate used in the following images}
+\end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=250pt]{leg}
+\caption{4 DOF (From top to bottom): Yaw at hip (+ counterclockwise),  Roll at hip (+ counterclockwise), Pitch at hip (+ counterclockwise), Roll at knee (+ counterclockwise).}
 \end{figure}
 
-Low birth weight rate in non-smoker group is $4.1\%$, compared to $7.8\%$ in smoker group. This supports the association between low birth rate and mom's smoking habbit.  
+Then we extract the D-H parameters from this model.
 
-\section{Summary}
+\begin{figure}[H]
+\centering
+\includegraphics[width=200pt]{leg_para}
+\caption{D-H parameters extracted from a human right leg.}
+\end{figure}
 
-This lab covered the concept and attributes of categorical and numerical data.  
+After we compute the transformation matrices using equation:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{trans}
+\end{figure}
+
+We test this forward kinematics model with controlled configuration state. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{fk}
+\caption{A sample kick-and-retract-to-the-side movement.}
+\end{figure}
+
+In the next part, we implement the inverse kinematics algorithm. We first created a linear path of desired operational state.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{desired}
+\end{figure}
+
+Since our system is under-actuated, we only try to make the coordinates of end effector(toe) match with the path, and disregard the rotational orientation.\\
+We implemented an iterative method to find the joint states given an end coordinate. First we pick a joint state, evaluate the difference between the desired joint state and the current state, calculate the Jacobian matrix, and take a joint state step forward. \\
+Since this motion starts at the all-zero configuration-state, we used this as a known starting point. And for each next point, we use the previous calculated joint state values as the start searching point.
+
+\begin{equation}
+	dq = (J^TJ)^{-1}J^T \times ds 
+\end{equation}
+
+In practice, We divided each row $\vec{r}$ of the Jacobian matrix by $||\vec{r}||^2$ and multiplied it with the difference $\delta s$.
+
+\section{Results}
+
+We setup a threshold of error at $0.01 cm$ and it yields:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{difference}
+\caption{Calculated path with 0.01 cm tolerance.}
+\end{figure}
+
+The threshold can be set smaller to achieve a more accurate path.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{difference0_001}
+\caption{Calculated path with 0.001 cm tolerance.}
+\end{figure}
+
+This lab took me about 8 hours. Debugging took about half of the time.
 
 \end{document}
 

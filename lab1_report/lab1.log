@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.12.29)  26 JAN 2017 12:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.12.29)  26 JAN 2017 13:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -199,36 +199,83 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 47.
 
-<leg.png, id=1, 360.97359pt x 390.70969pt>
-File: leg.png Graphic file (type png)
- <use leg.png>
-Package pdftex.def Info: leg.png used on input line 55.
-(pdftex.def)             Requested size: 250.0pt x 270.59154pt.
+<rpy.png, id=1, 86.0013pt x 65.7657pt>
+File: rpy.png Graphic file (type png)
+ <use rpy.png>
+Package pdftex.def Info: rpy.png used on input line 60.
+(pdftex.def)             Requested size: 250.0pt x 191.17824pt.
  [1
 
 {c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<leg.png, id=11, 360.97359pt x 390.70969pt>
+File: leg.png Graphic file (type png)
+ <use leg.png>
+Package pdftex.def Info: leg.png used on input line 66.
+(pdftex.def)             Requested size: 250.0pt x 270.59154pt.
+ [2 <./rpy.png>]
+<leg_para.png, id=16, 191.59077pt x 125.34328pt>
+File: leg_para.png Graphic file (type png)
+ <use leg_para.png>
+Package pdftex.def Info: leg_para.png used on input line 74.
+(pdftex.def)             Requested size: 200.0pt x 130.85118pt.
+
+<trans.png, id=17, 578.16pt x 53.8261pt>
+File: trans.png Graphic file (type png)
+ <use trans.png>
+Package pdftex.def Info: trans.png used on input line 82.
+(pdftex.def)             Requested size: 345.0pt x 32.11848pt.
+ [3 <./leg.png> <./leg_para.png>] <fk.png, id=23, 843.15pt x 632.3625pt>
+File: fk.png Graphic file (type png)
+ <use fk.png>
+Package pdftex.def Info: fk.png used on input line 89.
+(pdftex.def)             Requested size: 345.0pt x 258.74925pt.
+
+<desired.png, id=24, 843.15pt x 632.3625pt>
+File: desired.png Graphic file (type png)
+ <use desired.png>
+Package pdftex.def Info: desired.png used on input line 97.
+(pdftex.def)             Requested size: 345.0pt x 258.74925pt.
+ [4 <./trans.png> <./fk.png (PNG copy)>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 58.
+(Font)              <7> on input line 104.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 58.
- [2 <./leg.png>] (./lab1.aux) ) 
+(Font)              <5> on input line 104.
+ <difference.png, id=29, 843.15pt x 632.3625pt>
+File: difference.png Graphic file (type png)
+
+<use difference.png>
+Package pdftex.def Info: difference.png used on input line 116.
+(pdftex.def)             Requested size: 345.0pt x 258.74925pt.
+ [5 <./desired.png (PNG copy)>]
+<difference0_001.png, id=38, 843.15pt x 632.3625pt>
+File: difference0_001.png Graphic file (type png)
+ <use difference0_001.png>
+Package pdftex.def Info: difference0_001.png used on input line 124.
+(pdftex.def)             Requested size: 345.0pt x 258.74925pt.
+
+[6 <./difference.png (PNG copy)>] [7 <./difference0_001.png (PNG copy)>]
+(./lab1.aux) ) 
 Here is how much of TeX's memory you used:
- 3103 strings out of 493013
- 44429 string characters out of 6137007
- 125838 words of memory out of 5000000
- 6626 multiletter control sequences out of 15000+600000
+ 3140 strings out of 493013
+ 44973 string characters out of 6137007
+ 126838 words of memory out of 5000000
+ 6656 multiletter control sequences out of 15000+600000
  7280 words of font info for 26 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,6n,49p,239b,229s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2016/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmbx12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
-fb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on lab1.pdf (2 pages, 319943 bytes).
+ 40i,6n,49p,276b,229s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12
+.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/20
+16/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2016/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2016/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2016/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
+.pfb>
+Output written on lab1.pdf (7 pages, 595727 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
- 22 compressed objects within 1 object stream
+ 76 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
