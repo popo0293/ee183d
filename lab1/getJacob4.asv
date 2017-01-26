@@ -1,0 +1,20 @@
+function [ J ] = getJacob4( q1,q2,q3,q4 )
+
+J = zeros(4,4);
+J(1,1) = -cos(q1)*(sin(q2)*cos(q3)*(48*cos(q4)+55)+48*cos(q2)*sin(q4))+sin(q1)*sin(q3)*(48*cos(q4)+55);
+J(1,2) = -sin(q1)*cos(q2)*cos(q3)*(48*cos(q4)+55)+sin(q1)*48*sin(q2)*sin(q4);
+J(1,3) = sin(q1)*sin(q2)*sin(q3)*(48*cos(q4)+55)-cos(q1)*cos(q3)*(48*cos(q4)+55);
+J(1,4) = 48*(sin(q1)*sin(q2)*cos(q3)+cos(q1)*sin(q3))*sin(q4)-48*sin(q1)*cos(q2)*cos(q4);
+
+J(2,1) = -sin(q1)*(sin(q2)*cos(q3)*(48*cos(q4)+55)+48*cos(q2)*sin(q4))-cos(q1)*sin(q3)*(48*cos(q4)+55);
+J(2,2) = cos(q1)*cos(q2)*cos(q3)*(48*cos(q4)+55)-cos(q1)*48*sin(q2)*sin(q4);
+J(2,3) = -cos(q1)*sin(q2)*sin(q3)*(48*cos(q4)+55)-sin(q1)*cos(q3)*(48*cos(q4)+55);
+J(2,4) = 48*(-cos(q1)*sin(q2)*cos(q3)+sin(q1)*sin(q3))*sin(q4)+48*cos(q1)*cos(q2)*cos(q4);
+
+J(3,1) = 0;
+J(3,2) = sin(q2)*cos(q3)*(48*cos(q4)+55)+48*cos(q2)*sin(q4);
+J(3,3) = cos(q2)*sin(q3)*(48*cos(q4)+55);
+J(3,4) = cos(q2)*cos(q3)*48*sin(q4)+48*;
+
+
+end

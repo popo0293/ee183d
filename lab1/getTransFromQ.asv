@@ -1,0 +1,25 @@
+function [ T ] = getTransFromQ( q , T_end )
+
+DH_list = [ [0      0       pi/2    0]
+            [0      pi/2    -pi/2   0]
+            [0      -pi/2   0       0]
+            [l1     pi/2    0       0]];
+
+s = size(q);
+T = zeros(4,4,s(2)+1);
+a = q(:,1);
+alpha = q(:,2);
+theta = q(:,3);
+d = q(:,4);
+
+for i = 1:s(2)
+    T(:,:,i) = [[cos(theta(i))                  -sin(theta(i))              0               a(i)]
+                [sin(theta(i))*cos(alpha(i))    cos(theta(i))*cos(alpha(i)) -sin(alpha(i))  -d(i)*sin(alpha(i))]
+                [sin(theta(i))*sin(alpha(i))    cos(theta(i))*sin(alpha(i)) cos(alpha(i))   d(i)*cos(alpha(i))]
+                [0                              0                           0               1]];
+end
+
+T(:,:,s(2)+1) = T_end;
+
+end
+
